@@ -1,0 +1,141 @@
+.App {
+    text-align: center;
+  }
+  
+  /* style.css */
+  
+  /* Общие стили */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc; /* Светлый пастельный фон */
+    color: #333; /* Темный текст для контраста */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Заголовок */
+  h2 {
+    color: #4a90e2; /* Пастельный синий цвет */
+    text-align: center;
+  }
+  
+  /* Стили для списка задач */
+  .todo-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* Белый фон для списка */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+  }
+  
+  /* Стили для элементов списка */
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0; /* Легкая граница между элементами */
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none; /* Убираем границу у последнего элемента */
+  }
+  
+  /* Стили для кнопок */
+  button {
+    background-color: #4a90e2; /* Пастельный синий цвет */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #357ab8; 
+  }
+  
+  input[type="text"] {
+    max-width: 99%;
+
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .theme-toggle {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  .editButton{
+    background-color: #eba141; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  /* СДЕЛАЬТ ПЕРЕКЛЮЧЕНИЕ  */
+  .editButton:hover {
+    background-color: #d48d31; 
+  }
+
+  .deleteButton{
+    background-color: #e44242; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .deleteButton:hover {
+    background-color: #d42e2e; 
+  }
+
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
