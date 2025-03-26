@@ -19,25 +19,91 @@
     text-align: center;
   }
   
+  .todo-form{
+    margin: 10px;
+    
+  }
+
   /* Стили для списка задач */
   .todo-list {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
-    background-color: #ffffff; /* Белый фон для списка */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 10px rgba(11, 3, 126, 0.1); 
   }
   
   /* Стили для элементов списка */
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #e0e0e0; /* Легкая граница между элементами */
-  }
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.todo-text {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.auth-form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-form input {
+  width: 100%;
+  max-width: 378px;
+  padding: 10px ;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sign-out {
+  background-color: #e44242;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
   
+  margin: 10px 0;
+}
+
+.error {
+  color: #d42e2e;
+  margin: 10px 0;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Остальные стили остаются без изменений */
+  
+  /* .TodoItem{
+    background-color: #d42e2e;
+  } */
+
   .todo-item:last-child {
     border-bottom: none; /* Убираем границу у последнего элемента */
   }
@@ -73,6 +139,81 @@
     justify-content: center;
   }
   
+  .task-status {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  .due-date {
+    margin: 10px;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid black;
+  }
+
+
+  .set-reminder {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .set-reminder:hover {
+    background-color: #4a90e2;
+  }
+  
+  .reminder-time {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    width: 180px; /* Фиксированная ширина для поля ввода времени */
+    margin-left: 10px; /* Отступ от чекбокса */
+  }
+  
+  /* Скрываем нативный чекбокс */
+  .dontsee {
+    /* position: absolute; */
+    opacity: 0;
+    /* width: 0;
+    height: 0; */
+  }
+  
+  /* Создаем кастомный чекбокс
+  .set-reminder label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  } */
+  
+  /* .set-reminder label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #aaa;
+    background: #fff;
+    border-radius: 3px;
+  } */
+  
+  /* .set-reminder input:checked + label:after {
+    content: "✓";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4a90e2;
+    font-weight: bold;
+  } */
+
   .App-logo {
     height: 40vmin;
     pointer-events: none;

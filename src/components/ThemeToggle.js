@@ -15,7 +15,6 @@ const ThemeToggle = ({ toggleTheme }) => {
         margin: 'auto',
         marginBottom: '50px',
         marginTop: '50px',
-        
         flexDirection: 'column', 
         justifyContent: 'center', 
         transition: 'transform 0.6s', 

@@ -88,18 +88,16 @@ export const addTodo = (todo) => async (dispatch) => {
 // Редактирование задачи
 export const editTodo = (todo) => async (dispatch) => {
   try {
-    // dispatch(setLoading(true));
+    dispatch(setLoading(true));
     
-    // Убедитесь, что todo.id существует и это строка
-    if (!todo.id) throw new Error('ID is required');
-
-    const todoRef = doc(db, "todos", todo.id); // Здесь падала ошибка
+    const todoRef = doc(db, "todos", todo.id);
     await updateDoc(todoRef, {
       text: todo.text,
       status: todo.status,
       dueDate: todo.dueDate,
       reminder: todo.reminder,
-      reminderTime: todo.reminderTime
+      reminderTime: todo.reminderTime,
+      reminded: todo.reminded
     });
     
     dispatch({
@@ -108,8 +106,9 @@ export const editTodo = (todo) => async (dispatch) => {
     });
     
   } catch (error) {
-    console.error("Error editing document:", error);
     dispatch(setError(error.message));
+    console.error("Error editing todo:", error);
+    throw error;
   } finally {
     dispatch(setLoading(false));
   }
